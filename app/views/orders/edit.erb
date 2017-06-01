@@ -1,0 +1,9 @@
+<form action="/orders/<%@order.id%>" method="post">
+	<input type="hidden" name="_method" value="patch">
+
+	<input type"text" name="item_size" value=<% @item.item_size%>>
+		<input type"text" name="item_name" value=<% @item.item_name%>>
+
+	<input type="submit" name="Edit Order"> 
+		
+</form>

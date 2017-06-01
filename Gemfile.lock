@@ -15,10 +15,15 @@ GEM
       tzinfo (~> 1.1)
     arel (6.0.4)
     backports (3.6.8)
+    bcrypt (3.1.11)
     builder (3.2.3)
+    dotenv (2.2.1)
+    httparty (0.15.5)
+      multi_xml (>= 0.5.2)
     i18n (0.8.1)
     minitest (5.10.1)
     multi_json (1.12.1)
+    multi_xml (0.6.0)
     pg (0.20.0)
     rack (1.6.5)
     rack-protection (1.5.3)
@@ -41,6 +46,8 @@ GEM
     tilt (2.0.6)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    zomato (0.0.1)
+      httparty
 
 PLATFORMS
   ruby
@@ -48,10 +55,13 @@ PLATFORMS
 DEPENDENCIES
   activerecord (~> 4.1)
   activesupport (~> 4.1)
+  bcrypt
+  dotenv
   pg
   rake
   sinatra
   sinatra-contrib
+  zomato
 
 BUNDLED WITH
    1.14.6

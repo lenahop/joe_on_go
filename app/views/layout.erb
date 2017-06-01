@@ -1,9 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<style>
+body {
+	background-image: url(https://s-media-cache-ak0.pinimg.com/736x/fd/38/43/fd38438ff477160428b00ce7029789c5.jpg);
+
+
+}
+
+</style>
   <title></title>
 </head>
 <body>
+	<% if session[:user_id] %> 
+	<form action="/sessions/<%=session[:id]%>" method="post">
+	<input type="hidden" name="_method" value="delete">
+	<input type='submit' value="Logout">
+</form>
+	<form action="/orders/:id" method="get">
+		<input type="submit" value="My Orders">
+
+	</form>
+	<%end%>
   <%= yield %>
 </body>
 </html>
